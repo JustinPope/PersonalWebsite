@@ -171,3 +171,64 @@ header {
         margin: 10px 0;
     }
 }
+
+/* Additional Responsive Header Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .menu {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .email {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .menu ul li {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .email {
+        font-size: 12px;
+    }
+}
