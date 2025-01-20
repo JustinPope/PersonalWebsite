@@ -16,31 +16,49 @@
 /* Header */
 header {
     background-color: #292e49;
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 15px 10%;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
     position: relative;
     z-index: 10;
 }
 
+.logo {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.menu {
+    flex: 2 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .menu ul {
     display: flex;
-    align-items: center;
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .menu ul li {
     margin: 0 15px;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 .menu ul li a {
     text-decoration: none;
     color: #b2b1b1;
     transition: color 0.3s ease;
+    font-size: 16px;
 }
 
 .menu ul li a:hover,
@@ -48,14 +66,12 @@ header {
     color: aqua;
 }
 
-.logo img {
-    width: 60px;
-    cursor: default;
-}
-
 .email {
+    flex: 1 1 auto;
+    text-align: right;
     color: aliceblue;
     font-size: 16px;
+    white-space: nowrap; /* Prevents wrapping of email */
 }
 
 /* Banner Section */
@@ -150,39 +166,12 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    header .menu ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header .menu ul li {
-        margin: 10px 0;
-    }
-
-    .social-icons ul {
-        flex-direction: column;
-    }
-
-    .social-icons ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Additional Responsive Header Styles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 15px;
     }
 
     .logo {
-        flex: 1 1 100%;
-        display: flex;
         justify-content: center;
         margin-bottom: 10px;
     }
@@ -192,10 +181,7 @@ header {
     }
 
     .menu {
-        flex: 1 1 100%;
-        display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     .menu ul {
@@ -208,8 +194,6 @@ header {
     }
 
     .email {
-        flex: 1 1 100%;
-        text-align: center;
         margin-top: 10px;
         font-size: 14px;
     }
@@ -220,7 +204,7 @@ header {
         padding: 15px;
     }
 
-    .menu ul li {
+    .menu ul li a {
         font-size: 14px;
     }
 
