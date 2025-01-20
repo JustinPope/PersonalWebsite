@@ -26,10 +26,11 @@ header {
 }
 
 .logo {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .logo img {
@@ -37,7 +38,7 @@ header {
 }
 
 .menu {
-    flex: 2 1 auto;
+    flex: 1 1 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,9 +46,11 @@ header {
 
 .menu ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
 
 .menu ul li {
@@ -67,8 +70,8 @@ header {
 }
 
 .email {
-    flex: 1 1 auto;
-    text-align: right;
+    flex: 1 1 100%;
+    text-align: center;
     color: aliceblue;
     font-size: 16px;
     white-space: nowrap; /* Prevents wrapping of email */
