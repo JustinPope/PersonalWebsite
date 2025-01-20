@@ -67,12 +67,16 @@ header {
 }
 
 .email {
-    flex: 1 1 100%;
     text-align: center;
-    font-size: 16px;
-    color: aliceblue;
     margin-top: 10px;
-    white-space: nowrap; /* Prevent wrapping of email */
+    font-size: 14px;
+    color: #999; /* Match social icon color */
+    cursor: pointer; /* Indicate it's clickable */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.email:hover {
+    color: aqua; /* Highlight blue on hover */
 }
 
 /* Banner Section */

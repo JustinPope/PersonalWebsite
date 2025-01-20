@@ -35,9 +35,18 @@
                     <li><a href="https://www.instagram.com/icaruswefly/" target="_blank"><i class="fa fa-instagram"></i></i></a></li>
                 </ul>
             </div>
-            <div class="email">
+            <div class="email" onclick="copyToClipboard('justinpope684@gmail.com')">
                 justinpope684@gmail.com
             </div>
         </div>
+        <script>
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(function () {
+                    alert("Email copied to clipboard: " + text);
+                }, function (err) {
+                    console.error("Failed to copy: ", err);
+                });
+            }
+        </script>        
     </body>
     </HTML>
