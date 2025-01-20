@@ -19,17 +19,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10%;
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    padding: 15px 10%;
     position: relative;
     z-index: 10;
+    text-align: center;
 }
 
 .logo {
     flex: 1 1 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -41,16 +41,13 @@ header {
     flex: 1 1 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .menu ul {
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: center;
 }
 
 .menu ul li {
@@ -72,9 +69,10 @@ header {
 .email {
     flex: 1 1 100%;
     text-align: center;
-    color: aliceblue;
     font-size: 16px;
-    white-space: nowrap; /* Prevents wrapping of email */
+    color: aliceblue;
+    margin-top: 10px;
+    white-space: nowrap; /* Prevent wrapping of email */
 }
 
 /* Banner Section */
@@ -169,22 +167,11 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .logo {
-        justify-content: center;
-        margin-bottom: 10px;
+        padding: 10px;
     }
 
     .logo img {
         width: 50px;
-    }
-
-    .menu {
-        justify-content: center;
     }
 
     .menu ul {
@@ -197,22 +184,22 @@ header {
     }
 
     .email {
-        margin-top: 10px;
         font-size: 14px;
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 15px;
-    }
-
-    .menu ul li a {
-        font-size: 14px;
+        padding: 10px;
     }
 
     .logo img {
         width: 40px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
     }
 
     .email {
