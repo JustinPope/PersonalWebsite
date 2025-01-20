@@ -1,110 +1,173 @@
-*{
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-sherif;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-.container{
+
+/* Container */
+.container {
     width: 100%;
-    height: 100%;
-    background: #42455a
+    min-height: 100vh;
+    background-color: #42455a;
 }
+
+/* Header */
 header {
     background-color: #292e49;
-    height: 120px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10%;
+    position: relative;
+    z-index: 10;
 }
-.menu ul{
-    display:inline-flex;
-    align-items: center;
-    
-}
-.menu ul li{
-    list-style: none;
-    margin: 0 20px;
-    color: #b2b1b1;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 18px;
-}
-.menu ul li a{
-    list-style: none;
-    color: #b2b1b1;
-    cursor: pointer;
-    text-decoration: none;
-}
-.logo img{
-    width: 60px;
 
+.menu ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #b2b1b1;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover,
+.menu ul li.active {
+    color: aqua;
+}
+
+.logo img {
+    width: 60px;
     cursor: default;
 }
-.email{
-    color:aliceblue;
-    font-size: 18px;
-    margin-right: 20px;
+
+.email {
+    color: aliceblue;
+    font-size: 16px;
 }
-.active{
-    color: aqua !important;
-}
-.banner{
-    width: 80%;
-    height: 70%;
-    top: 25%;
-    left: 130px;
-    position: absolute;
+
+/* Banner Section */
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
     color: aliceblue;
 }
-.app-text{
-    width: 50%;
-    float: left;
+
+.app-text {
+    flex: 1 1 50%;
+    padding: 20px;
 }
-.app-text h1{
-    font-size: 43px;
-    width: 640px;
-    position: relative;
-    margin-left: 40px;
+
+.app-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
-.app-text p{
-    width: 650px;
-    font-size: 14px;
-    margin: 30px 0 30px 40px;
-    line-height: 25px;
-    color: #919191;
+
+.app-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #b2b1b1;
 }
-.app-picture{
-    width: 50%;
-    float: right;
-}
-.app-picture img{
-    width: 100%;
-    margin-top: -20px;
-    padding-left: 50px;
-}
-.portrait{
-    width: 50%;
-    float: right;
-}
-.portrait img{
-    width: 70%;
-    margin-top: -20px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-}
-.social-icons{
-    right: 72px;
-    bottom: 35px;
-    position: absolute;
-}
-.social-icons ul li{
-    list-style: none;
-    margin-top: 15px;
+
+.portrait {
+    flex: 1 1 40%;
     text-align: center;
 }
-.social-icons ul li a{
+
+.portrait img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-icons ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.social-icons ul li a {
     color: #999;
     border-radius: 50%;
     border: 1px solid #999;
-    padding: 5px;
+    padding: 10px;
     display: block;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.social-icons ul li a:hover {
+    color: aqua;
+    border-color: aqua;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-text, .portrait {
+        flex: 1 1 100%;
+    }
+
+    .app-text h1 {
+        font-size: 28px;
+    }
+
+    .app-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    header .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .menu ul li {
+        margin: 10px 0;
+    }
+
+    .social-icons ul {
+        flex-direction: column;
+    }
+
+    .social-icons ul li {
+        margin: 10px 0;
+    }
 }
